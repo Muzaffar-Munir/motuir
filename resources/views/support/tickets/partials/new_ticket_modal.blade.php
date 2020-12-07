@@ -2,7 +2,7 @@
 <div class="modal fade" id="composemodal" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <form method="post" action="<?php echo $api_action; ?>">
+            <!-- <form method="post" action="<?php //echo $api_action; ?>"> -->
                 <div class="modal-header">
                     <h5 class="modal-title" id="composemodalTitle">New Ticket</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -12,15 +12,15 @@
                 <div class="modal-body">
 
                     <div class="form-group">
-                        <input type="text" required class="form-control" name="user_name" placeholder="Username">
+                        <input type="text" required class="form-control user_name" name="user_name" placeholder="Username">
                     </div>
 
                     <div class="form-group">
-                        <input type="text" required class="form-control" name="subject" placeholder="Subject">
+                        <input type="text" required class="form-control subject_title" name="subject" placeholder="Subject">
                     </div>
                     <div class="form-group">
                         <input type="hidden" class="description" name="description" required>
-                        <div class="summernote" required name="description">
+                        <div class="summernote" id="description" required name="description">
 
                         </div>
                     </div>
@@ -29,9 +29,9 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Create <i class="fab fa-telegram-plane ml-1"></i></button>
+                    <button id="addButton" class="btn btn-primary">Create <i class="fab fa-telegram-plane ml-1"></i></button>
                 </div>
-            </form>
+            <!-- </form> -->
         </div>
     </div>
 </div>
