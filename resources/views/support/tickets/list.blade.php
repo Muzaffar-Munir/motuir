@@ -56,7 +56,7 @@
                             </div>
 
                         </li>
-                        @if ($tickets)
+                        @if (!empty($tickets))
                             @foreach ($tickets as $ticket)
                                 <li>
                                     <div class="col-mail col-mail-1">
